@@ -1,0 +1,1005 @@
+/*----------------------------
+  NoteBook
+  ----------------------------
+
+  PROJECT:VETC
+  DATE: 19/6/2019
+  AUTHUR: Nguyen The Nhat
+
+ -----------------------------*/
+/*Import-Path*/
+/*Import Fonts*/
+@font-face {
+  font-family: "VETCLight-Regular";
+  src: url("../fonts/VETCLight_gdi.eot");
+  src: url("../fonts/VETCLight_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/VETCLight_gdi.otf") format("opentype"), url("../fonts/VETCLight_gdi.woff") format("woff"), url("../fonts/VETCLight_gdi.ttf") format("truetype"), url("../fonts/VETCLight_gdi.svg#VETCLight-Regular") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB06;
+}
+@font-face {
+  font-family: "VETCRegular-Regular";
+  src: url("../fonts/VETCRegular_gdi.eot");
+  src: url("../fonts/VETCRegular_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/VETCRegular_gdi.otf") format("opentype"), url("../fonts/VETCRegular_gdi.woff") format("woff"), url("../fonts/VETCRegular_gdi.ttf") format("truetype"), url("../fonts/VETCRegular_gdi.svg#VETCRegular-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+@font-face {
+  font-family: "VETC-Bold";
+  src: url("../fonts/VETC-Bold_gdi.eot");
+  src: url("../fonts/VETC-Bold_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/VETC-Bold_gdi.otf") format("opentype"), url("../fonts/VETC-Bold_gdi.woff") format("woff"), url("../fonts/VETC-Bold_gdi.ttf") format("truetype"), url("../fonts/VETC-Bold_gdi.svg#VETC-Bold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB06;
+}
+/*============================
+  Common Style
+ ============================*/
+/*variables*/
+/*mixin*/
+/*common-class*/
+.sprites {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "VETCRegular-Regular";
+  font-size: 13px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.border-news {
+  border: 1px solid #0db26d;
+}
+
+.color-text {
+  color: #0db26d;
+}
+
+.color-purple {
+  color: #783a97;
+}
+
+.clear {
+  clear: both;
+}
+
+/*============================
+  Home Page
+ ============================*/
+/*Top-Header*/
+.top-header {
+  padding: 5px !important;
+}
+.top-header .navbar {
+  padding: 0;
+}
+.top-header .navbar-header ul {
+  display: inline-block;
+}
+.top-header .navbar-header ul li {
+  display: inline-block;
+  font-family: "VETCLight-Regular";
+  font-size: 9px !important;
+  color: #fff;
+  text-transform: uppercase;
+}
+.top-header .navbar-header ul li a {
+  color: #fff;
+  padding: 7px;
+}
+.top-header .navbar-header .top-nav-active .nav-link-menu {
+  background: #24a15c;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: -5px !important;
+}
+.top-header .navbar-header .top-nav-active .nav-link-account {
+  background: #783a97;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.top-header .navbar-header .top-nav-active .nav-link-account img {
+  height: 18px;
+  margin-top: -4px;
+}
+.top-header .top-form {
+  position: relative;
+}
+.top-header .top-form .input-group-sm input {
+  width: 150px !important;
+  height: 24px !important;
+  border-radius: 25px;
+}
+.top-header .top-form img {
+  position: absolute;
+  top: 2px !important;
+  left: 128px !important;
+}
+
+/*Header*/
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header {
+  height: 49px !important;
+  height: 100%;
+  color: #fff !important;
+  background: #24a15c !important;
+}
+.header .show {
+  display: block;
+  background: #23c66c;
+  z-index: 111;
+}
+.header .navbar {
+  padding: 0 1rem !important;
+}
+.header .navbar .nav-item {
+  padding: 7px 1px;
+}
+.header .navbar .nav-item .dropdown-item {
+  padding: 0.3rem 0.75rem;
+}
+.header .navbar .nav-item .dropdown-item:hover {
+  background: #23c66c;
+}
+.header .navbar-brand {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  z-index: 500;
+  outline: 0;
+}
+.header ul li a {
+  font-family: "VETCRegular-Regular";
+  font-size: 12px !important;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header .dropdown-menu {
+  margin: 0;
+  border: 0;
+}
+.header .dmenu .sm-menu {
+  background: #23c66c;
+  border-radius: 0 !important;
+  z-index: 111;
+}
+
+/*Login*/
+.login-hidden .box-login-mobile {
+  width: 100%;
+}
+.login-hidden .box-login-mobile .panel-heading a {
+  border: none !important;
+  border-radius: 5px !important;
+  color: #0db26d !important;
+  background: #5e2e88 !important;
+  font-family: "VETCLight-Regular";
+  font-size: 14px !important;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+/*Banner*/
+#skdslider {
+  width: 100% !important;
+  height: 490px !important;
+}
+#skdslider .slide {
+  z-index: -2;
+  position: relative;
+  height: 490px;
+}
+#skdslider .slide .img-slider {
+  position: absolute;
+}
+#skdslider .slide .slide-desc {
+  position: unset !important;
+  padding-top: 8% !important;
+  padding-left: 18%;
+}
+#skdslider .slide .slide-desc .btn-slider {
+  color: #fff !important;
+  background: #492b7a !important;
+  padding: 3px 40px;
+  font-family: "VETCRegular-Regular";
+  font-size: 13px !important;
+}
+#skdslider .slide img {
+  width: auto !important;
+  height: auto !important;
+  z-index: -1;
+}
+#skdslider .slide-1 {
+  color: #fff !important;
+  background: url("../images/icons/pro_home_banner2.jpg") !important;
+}
+#skdslider .slide-1 .img-slider1 {
+  top: 0;
+  right: 17%;
+}
+#skdslider .slide-2 {
+  color: #fff !important;
+  background: url("../images/icons/pro_home_banner1_1.jpg") !important;
+}
+#skdslider .slide-2 .img-slider2 {
+  top: 27%;
+  right: 17%;
+}
+#skdslider .slide-2 .img-slider2_2 {
+  top: 9%;
+  right: 29%;
+  z-index: 1;
+}
+#skdslider .slide-3 {
+  color: #fff !important;
+  background: #06ad5d !important;
+  width: 100%;
+}
+#skdslider .slide-3 .img-slider3 {
+  top: 3%;
+  right: 17%;
+}
+#skdslider .slide-4 {
+  color: #fff !important;
+  background: #5e2d88 !important;
+  width: 100%;
+}
+#skdslider .slide-4 .img-slider4 {
+  top: 7%;
+  left: 11%;
+}
+#skdslider .slide-4 .slide-desc {
+  padding-top: 10%;
+  padding-left: 48%;
+}
+
+.skdslider a.prev {
+  background: url(../images/icons/left.png) no-repeat scroll 0 0 transparent;
+  width: 35px;
+  height: 35px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  margin-top: -17px;
+}
+
+.skdslider a.next {
+  background: url(../images/icons/right.png) no-repeat scroll 0 0 transparent;
+  width: 35px;
+  height: 35px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  margin-top: -17px;
+}
+
+/*Intro-Home*/
+.intro {
+  font-family: "VETCLight-Regular";
+  font-size: 30px !important;
+}
+.intro .intro-1 {
+  color: #47b276 !important;
+  background: #e4e5e6 !important;
+  padding: 20px 20px;
+}
+.intro .intro-2 {
+  color: #47b276 !important;
+  background: #efeff0 !important;
+  padding: 20px 20px;
+}
+.intro .intro-text {
+  color: #47b276;
+}
+.intro .ilovevetc {
+  background: url("../images/icons/common_fbslogan_bgr.jpg") no-repeat !important;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  width: 100%;
+  padding: 11px;
+}
+.intro .ilovevetc .ilove-text {
+  font-family: "VETC-Bold";
+  font-size: 35px !important;
+}
+.intro .ilovevetc .ilove-space {
+  font-size: 42px;
+  color: #01c46b;
+  padding: 0px 30px;
+}
+.intro .ilovevetc .ilove-slogan {
+  font-family: "VETCLight-Regular";
+  font-size: 21px !important;
+  color: #fff;
+}
+
+/*New*/
+.news-home .slider-banner .owl-nav button {
+  position: absolute;
+  width: 20px !important;
+  height: 20px !important;
+  text-indent: -99999999px;
+  margin-top: -40px !important;
+  background-repeat: no-repeat !important;
+}
+.news-home .slider-banner .owl-prev {
+  background: url(../images/icons/common_icon_prev_selected.png) !important;
+  background-size: cover !important;
+  bottom: 10px !important;
+  right: 30px !important;
+}
+.news-home .slider-banner .owl-next {
+  background: url(../images/icons/common_icon_next_selected.png) !important;
+  background-size: cover !important;
+  bottom: 10px !important;
+  right: 4px !important;
+}
+.news-home .widget-content .img {
+  width: 100%;
+}
+.news-home .widget-content.item-rd {
+  padding: 6px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.news-home .widget-content .widget-text {
+  padding: 10px;
+}
+.news-home .host-news-img {
+  padding-right: 0;
+}
+.news-home .host-news-dots {
+  position: relative;
+  margin-top: 28px;
+  color: #fff !important;
+  background: #25a55e !important;
+}
+.news-home .host-news-dots .widget-btn {
+  background: #5e2e88;
+  position: absolute;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 30px !important;
+}
+.news-home .host-news-dots p {
+  padding: 10px;
+}
+
+.widget-title {
+  margin-bottom: -6px;
+}
+.widget-title img {
+  margin-bottom: 6px;
+  width: 26px !important;
+  height: 27px !important;
+  display: inline-block !important;
+}
+.widget-title .left {
+  margin-right: -5px;
+}
+.widget-title .right {
+  margin-left: -5px;
+}
+.widget-title .widget-td {
+  color: #fff !important;
+  background: #0db26d !important;
+  font-family: "VETCLight-Regular";
+  font-size: 18px !important;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 4px 10px;
+}
+
+/*Share*/
+.share-title {
+  background: url(../images/icons/common_separate_bgr_1.png) repeat-x;
+  text-align: center;
+  min-height: 10px;
+}
+.share-title span {
+  color: #0db26d !important;
+  background: #fff !important;
+  font-size: 27px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  position: relative;
+  top: -7px;
+}
+
+.share-home .slide-share {
+  background: #e7e9e9;
+  border-radius: 10px;
+}
+.share-home .slide-share .mCSB_scrollTools {
+  opacity: 0.75 !important;
+}
+.share-home .slide-share .mCSB_scrollTools:hover {
+  opacity: 1 !important;
+}
+.share-home .slide-share .mCSB_dragger_bar {
+  width: 14px !important;
+  background: #25a55e !important;
+}
+.share-home .slide-share .mCSB_draggerRail {
+  width: 2px;
+  background: #32aa67 !important;
+  box-shadow: none !important;
+}
+.share-home .slide-share #content-1.content {
+  height: 300px;
+}
+.share-home .slide-share .content {
+  float: left;
+  padding: 15px;
+  position: relative;
+  width: 740px;
+  max-width: 95%;
+}
+.share-home .slide-share .callbacks, .share-home .slide-share .callbacks + p, .share-home .slide-share #examples, .share-home .slide-share .content, .share-home .slide-share .disable-destroy, .share-home .slide-share .show-hide, .share-home .slide-share .dialog, .share-home .slide-share .all-themes-switch, .share-home .slide-share .scrollTo {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*Support*/
+.support-home .contact-home {
+  color: #fff !important;
+  background: #25a55e !important;
+}
+.support-home .contact-home .top-form {
+  position: relative;
+}
+.support-home .contact-home .top-form a {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+}
+.support-home .contact-home .top-form input {
+  width: 240px !important;
+  height: 42px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+.support-home .contact-home .media-sp img {
+  padding: 0 3px;
+}
+.support-home .contact-home .app img {
+  width: 117px !important;
+  height: 40px !important;
+}
+.support-home .support .support-content .support-box {
+  border: 1px solid #dcddde;
+  border-radius: 0;
+  padding: 20px;
+  height: 100%;
+}
+
+/*Footer*/
+.partner {
+  background: #b9bbbd;
+  padding: 15px 0;
+}
+.partner .partner-line {
+  background: #5e2e88;
+  height: 10px;
+  position: relative;
+  top: -20px;
+}
+.partner .partner-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+
+.footer {
+  color: #fff !important;
+  background: #25a55e !important;
+  font-family: "VETCLight-Regular";
+  font-size: 13px !important;
+}
+.footer a, .footer .company-info p {
+  color: #cbead9;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+/*Model*/
+.modal-gray {
+  margin: 85px auto;
+}
+.modal-gray .modal-content {
+  position: relative;
+  background: #dfe0e1;
+  padding: 20px;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none;
+  border: 1px solid #f0f1f2;
+}
+.modal-gray .modal-content .text-uppercase {
+  text-transform: uppercase;
+}
+.modal-gray .modal-header {
+  border: none;
+  display: block;
+}
+.modal-gray button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 7px !important;
+  margin: 0 !important;
+  color: #fff !important;
+  background: #25a55e !important;
+  opacity: 1;
+  text-shadow: none;
+  font-style: normal;
+}
+.modal-gray .description {
+  border-bottom: 1px solid #333;
+  padding: 5px;
+  display: inline-block;
+}
+.modal-gray .modal-body {
+  padding: 0px 70px;
+}
+.modal-gray .modal-body .row {
+  position: relative;
+}
+.modal-gray .modal-body .form-control {
+  text-align: center;
+  border: 1px solid #b3b3b4;
+}
+.modal-gray .modal-body .form-control {
+  font-family: "VETCRegular-Regular";
+  font-size: 13px !important;
+}
+.modal-gray .modal-body .btn-success {
+  color: #fff !important;
+  background: #25a55e !important;
+  border: none;
+}
+.modal-gray .modal-body .btn-fixed {
+  padding: 6px 44px;
+}
+
+/*============================
+  Sub Page
+ ============================*/
+/*About*/
+.about-vetc .content-hdqt .box-hdqt {
+  position: relative;
+  background: url("../images/img/pro_about_man_bgr.jpg") !important;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  margin-bottom: 50px;
+  color: #fff;
+  width: 100% !important;
+  height: 400px !important;
+}
+.about-vetc .content-hdqt .box-hdqt .title-hdqt {
+  padding-top: 25%;
+  padding-left: 5%;
+}
+.about-vetc .content-hdqt .box-hdqt img {
+  position: absolute;
+  bottom: 10px;
+  padding: 0 0 0 50% !important;
+  margin: 0 0 -10px 0 !important;
+  z-index: 1;
+  max-width: 100%;
+}
+
+/*San Pham*/
+.prev-header {
+  position: sticky;
+  top: -172px;
+  z-index: 100;
+  background: #fff;
+  padding-bottom: 10px;
+}
+.prev-header .container {
+  max-width: 1008px;
+}
+.prev-header .sp-menu {
+  border: 1px solid #A4A6A9;
+  margin: 0 4px;
+}
+.prev-header .sp-menu img {
+  width: 100%;
+}
+.prev-header .sp-menu p {
+  text-align: center;
+  color: #25a55e !important;
+  background: #fff !important;
+  padding: 20px !important;
+  margin: 0px !important;
+  font-family: "VETC-Bold";
+  font-size: 14px !important;
+  font-weight: bold;
+  display: block;
+}
+.prev-header .sp-menu p:hover {
+  color: #fff !important;
+  background: #25a55e !important;
+}
+
+.sub-banner {
+  position: relative;
+}
+.sub-banner .title-sub {
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 4px #240b3a;
+}
+
+.body-li-tk .object-img1 {
+  float: left;
+  width: 50%;
+}
+.body-li-tk .object-img1 img {
+  text-align: right;
+}
+.body-li-tk .object-text {
+  max-width: 30%;
+}
+.body-li-tk .tk-number {
+  font-family: "VETC-Bold";
+  font-size: 6.5em !important;
+  font-weight: bold;
+}
+.body-li-tk .money {
+  position: absolute;
+  animation-name: Mymoney;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.body-li-tk .money1 {
+  animation-duration: 2s;
+}
+.body-li-tk .money2 {
+  animation-duration: 3.5s;
+}
+@keyframes Mymoney {
+  from {
+    top: 80%;
+    right: 17%;
+  }
+  to {
+    top: 150%;
+    right: 17%;
+  }
+}
+
+.box-tollbooths {
+  overflow: hidden;
+  width: 100% !important;
+  height: 530px !important;
+  background: #e4e5e6;
+}
+.box-tollbooths .objetc-pro1 {
+  z-index: 10;
+}
+.box-tollbooths .object-pro {
+  position: absolute;
+}
+.box-tollbooths .oto1 {
+  animation-name: Protoll;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.box-tollbooths .oto2 {
+  animation-name: Protoll2;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.box-tollbooths .oto3 {
+  animation-name: Protoll3;
+  animation-duration: 7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes Protoll {
+  from {
+    bottom: 0%;
+    left: 0%;
+  }
+  to {
+    bottom: 100%;
+    left: 100%;
+  }
+}
+@keyframes Protoll2 {
+  from {
+    bottom: -5%;
+    left: 20%;
+  }
+  to {
+    bottom: 10%;
+    left: 38%;
+  }
+}
+@keyframes Protoll3 {
+  from {
+    bottom: -30%;
+    left: 0%;
+  }
+  to {
+    bottom: 3%;
+    left: 30%;
+  }
+}
+
+.content-dgd .share-home {
+  border: 1px solid #0db26d;
+}
+
+/*Gallery*/
+.list-gallery .box-gallery {
+  color: #fff !important;
+  background: #25a55e !important;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.list-gallery .box-gallery .content-gallery {
+  position: relative;
+}
+.list-gallery .box-gallery .content-gallery p {
+  padding: 10px 0;
+}
+.list-gallery .box-gallery .content-gallery p a {
+  color: #fff !important;
+}
+.list-gallery .box-gallery .content-gallery .img-responsive {
+  border-radius: 8px;
+  width: 100%;
+}
+.list-gallery .box-gallery .content-gallery .btn-play {
+  position: absolute;
+  top: 40% !important;
+  left: 45% !important;
+}
+
+.lg-outer .lg-icon {
+  text-indent: -99999999px;
+  width: 40px !important;
+  height: 40px !important;
+}
+.lg-outer .lg-prev {
+  background: url("../images/icons/prev.jpg") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-prev:hover {
+  background: url("../images/icons/prev-hover.jpg") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-next {
+  background: url("../images/icons/next-icon.jpg") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-next:hover {
+  background: url("../images/icons/next-icon-hover.jpg") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-thumb-outer .lg-toogle-thumb {
+  background: url("../images/icons/menu.png") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-thumb-outer .lg-toogle-thumb:hover {
+  background: url("../images/icons/menu-hover.png") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-close {
+  background: url("../images/icons/close.PNG") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-close:hover {
+  background: url("../images/icons/close-hover.png") no-repeat !important;
+  background-size: contain !important;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+}
+.lg-outer .lg-fullscreen {
+  display: none;
+}
+.lg-outer .lg-download {
+  display: none;
+}
+
+.content-li {
+  border: 10px solid #1e9b61;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.content-dgd {
+  background: #f6f6f6;
+}
+
+/*News*/
+.first-new {
+  border-top: 2px solid #0db26d;
+}
+
+.sub-news .share-title {
+  min-height: 5px !important;
+}
+.sub-news .box-news h5 {
+  font-family: "VETC-Bold";
+  font-size: 17px !important;
+}
+.sub-news .box-news span {
+  font-family: "VETCLight-Regular";
+  font-size: 10px !important;
+  padding: 10px 0 !important;
+  display: block;
+}
+.sub-news .pagination-custom .pagination li a {
+  border-radius: 0 !important;
+  margin: 0 2px !important;
+  border: 1px solid #cdcdcd;
+  color: #626263;
+  padding: 7px 12px;
+  font-size: 22px;
+}
+.sub-news .pagination-custom .pagination li a:hover {
+  background: #ddd;
+}
+.sub-news .pagination-custom .pagination li.active a {
+  border: 1px solid #25a55e;
+  color: #fff !important;
+  background: #25a55e !important;
+}
+
+/*============================
+    Mobile
+ ============================*/
+@media (max-width: 992px) {
+  .hidden-m {
+    display: none !important;
+  }
+
+  .header .container {
+    padding: 0;
+  }
+  .header .container .navbar {
+    padding: 0 !important;
+  }
+  .header .container .navbar .navbar-toggler {
+    color: #fff;
+    font-size: 30px;
+    padding: 8px 8px;
+  }
+  .header .container .navbar .nav-link {
+    padding-left: 8px;
+  }
+  .header .navbar-brand {
+    left: 50%;
+    margin-left: -105px !important;
+  }
+  .header .navbar-toggle {
+    float: left;
+    display: block;
+  }
+  .header .navbar-toggle .icon-bar {
+    background: #fff;
+  }
+
+  #skdslider .slide-desc {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-md {
+    display: none !important;
+  }
+
+  .text-center-md {
+    text-align: center;
+  }
+
+  .host-news-dots {
+    height: 150px;
+    margin-top: 0 !important;
+  }
+
+  .intro .intro-content {
+    width: 100%;
+  }
+  .intro .intro-content .img-intro, .intro .intro-content .title {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .login-hidden {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-5-custom {
+    width: 20% !important;
+    flex: 0 0 20%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

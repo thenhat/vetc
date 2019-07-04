@@ -1,0 +1,1191 @@
+/*----------------------------
+  NoteBook
+  ----------------------------
+
+  PROJECT:VETC
+  DATE: 19/6/2019
+  AUTHUR: Nguyen The Nhat
+
+ -----------------------------*/
+/*Import-Path*/
+$get-path-font: "../fonts";
+$get-name-1: "VETCLight_gdi";
+$get-name-2: "VETCRegular_gdi";
+$get-name-3: "VETC-Bold_gdi";
+$get-path-1: "#{$get-path-font}/#{$get-name-1}";
+$get-path-2: "#{$get-path-font}/#{$get-name-2}";
+$get-path-3: "#{$get-path-font}/#{$get-name-3}";
+/*Import Fonts*/
+@font-face {
+  font-family: 'VETCLight-Regular';
+  src: url('#{$get-path-1}.eot');
+  src: url('#{$get-path-1}.eot?#iefix') format('embedded-opentype'),
+  url('#{$get-path-1}.otf') format('opentype'),
+  url('#{$get-path-1}.woff') format('woff'),
+  url('#{$get-path-1}.ttf') format('truetype'),
+  url('#{$get-path-1}.svg#VETCLight-Regular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB06;
+}
+
+@font-face {
+  font-family: 'VETCRegular-Regular';
+  src: url('#{$get-path-2}.eot');
+  src: url('#{$get-path-2}.eot?#iefix') format('embedded-opentype'),
+  url('#{$get-path-2}.otf') format('opentype'),
+  url('#{$get-path-2}.woff') format('woff'),
+  url('#{$get-path-2}.ttf') format('truetype'),
+  url('#{$get-path-2}.svg#VETCRegular-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-family: 'VETC-Bold';
+  src: url('#{$get-path-3}.eot');
+  src: url('#{$get-path-3}.eot?#iefix') format('embedded-opentype'),
+  url('#{$get-path-3}.otf') format('opentype'),
+  url('#{$get-path-3}.woff') format('woff'),
+  url('#{$get-path-3}.ttf') format('truetype'),
+  url('#{$get-path-3}.svg#VETC-Bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB06;
+}
+
+
+/*============================
+  Common Style
+ ============================*/
+/*variables*/
+$black: #000;
+$white: #fff;
+$bg-intro1: #e4e5e6;
+$bg-intro2: #efeff0;
+$color-text: #47b276;
+$bg-nav: #24a15c;
+$bg-signin: #783a97;
+$bg-sub: #23c66c;
+$bd-text: #0db26d;
+$bg-share: #e7e9e9;
+$bg-support: #25a55e;
+$color-line: #5e2e88;
+$images-icons: "../images/icons";
+$images-img: "../images/img";
+/*mixin*/
+@mixin common-font($family,$size) {
+  font-family: $family;
+  font-size: $size !important;
+}
+
+@mixin color-background($color,$background) {
+  color: $color !important;
+  background: $background !important;
+}
+
+@mixin width-height($width,$height) {
+  width: $width !important;
+  height: $height !important;
+}
+
+@mixin padding-magin($padding,$magin) {
+  padding: $padding !important;
+  margin: $magin !important;
+}
+
+@mixin top-left($top,$left) {
+  top: $top !important;
+  left: $left !important;
+}
+
+@mixin bottom-right($bottom,$right) {
+  bottom: $bottom !important;
+  right: $right !important;
+}
+
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow !important;
+  -moz-box-shadow: $shadow !important;
+  box-shadow: $shadow !important;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  border-radius: $radius !important;
+}
+
+@mixin background($bg-img,$bg-size) {
+  background: $bg-img !important;
+  background-size: $bg-size !important;
+  -webkit-background-size: $bg-size !important;
+  -moz-background-size: $bg-size !important;
+  -o-background-size: $bg-size !important;
+}
+
+/*common-class*/
+.sprites {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  @include common-font("VETCRegular-Regular", 13px);
+  @include padding-magin(0px, 0px);
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.row {
+  margin: {
+    left: 0;
+    right: 0;
+  };
+}
+
+.border-news {
+  border: 1px solid $bd-text;
+}
+
+.color-text {
+  color: $bd-text;
+}
+
+.color-purple {
+  color: $bg-signin;
+}
+
+.clear {
+  clear: both;
+}
+
+/*============================
+  Home Page
+ ============================*/
+/*Top-Header*/
+.top-header {
+  padding: 5px !important;
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-header {
+    ul {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        @include common-font("VETCLight-Regular", 9px);
+        color: $white;
+        text-transform: uppercase;
+
+        a {
+          color: $white;
+          padding: 7px;
+        }
+      }
+    }
+
+    .top-nav-active {
+      .nav-link-menu {
+        //overflow: hidden;
+        background: $bg-nav;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-right: -5px !important;
+      }
+
+      .nav-link-account {
+        background: $bg-signin;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        img {
+          height: 18px;
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+
+  .top-form {
+    position: relative;
+
+    .input-group-sm input {
+      @include width-height(150px, 24px);
+      border-radius: 25px;
+    }
+
+    img {
+      position: absolute;
+      @include top-left(2px, 128px);
+    }
+
+  }
+}
+
+/*Header*/
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header {
+  height: 49px !important;
+
+  .show {
+    display: block;
+    background: $bg-sub;
+    z-index: 111;
+  }
+
+  height: 100%;
+  @include color-background($white, $bg-nav);
+
+  .navbar {
+    padding: 0 1rem !important;
+
+    .nav-item {
+      padding: 7px 1px;
+
+      .dropdown-item {
+        padding: .3rem 0.75rem;
+
+        &:hover {
+          background: $bg-sub;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    z-index: 500;
+    outline: 0;
+  }
+
+  ul {
+    li {
+      a {
+        @include common-font('VETCRegular-Regular', 12px);
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    border: 0;
+  }
+
+  .dmenu {
+    .sm-menu {
+      background: $bg-sub;
+      border-radius: 0 !important;
+      z-index: 111;
+    }
+  }
+
+}
+
+/*Login*/
+.login-hidden {
+  .box-login-mobile {
+    width: 100%;
+
+    .panel-heading a {
+      border: none !important;
+      border-radius: 5px !important;
+      @include color-background($bd-text, $color-line);
+      @include common-font("VETCLight-Regular", 14px);
+      padding: 5px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+/*Banner*/
+#skdslider {
+  @include width-height(100%, 490px);
+
+  .slide {
+    z-index: -2;
+    position: relative;
+    height: 490px;
+
+    .img-slider {
+      position: absolute;
+    }
+
+    .slide-desc {
+      position: unset !important;
+      padding-top: 8% !important;
+      padding-left: 18%;
+
+      .btn-slider {
+        @include color-background($white, #492b7a);
+        padding: 3px 40px;
+        @include common-font("VETCRegular-Regular", 13px);
+      }
+    }
+
+    img {
+      width: auto !important;
+      height: auto !important;
+      z-index: -1;
+    }
+  }
+
+  .slide-1 {
+    @include color-background($white, url("../images/icons/pro_home_banner2.jpg"));
+
+    .img-slider1 {
+      top: 0;
+      right: 17%;
+    }
+  }
+
+  .slide-2 {
+    @include color-background($white, url("../images/icons/pro_home_banner1_1.jpg"));
+
+    .img-slider2 {
+      top: 27%;
+      right: 17%;
+    }
+
+    .img-slider2_2 {
+      top: 9%;
+      right: 29%;
+      z-index: 1;
+    }
+  }
+
+  .slide-3 {
+    @include color-background($white, rgb(6, 173, 93));
+    width: 100%;
+
+    .img-slider3 {
+      top: 3%;
+      right: 17%;
+    }
+  }
+
+  .slide-4 {
+    @include color-background($white, rgb(94, 45, 136));
+    width: 100%;
+
+    .img-slider4 {
+      top: 7%;
+      left: 11%;
+    }
+
+    .slide-desc {
+      padding-top: 10%;
+      padding-left: 48%;
+    }
+  }
+}
+
+.skdslider a.prev {
+  background: url(../images/icons/left.png) no-repeat scroll 0 0 transparent;
+  width: 35px;
+  height: 35px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  margin-top: -17px;
+}
+
+.skdslider a.next {
+  background: url(../images/icons/right.png) no-repeat scroll 0 0 transparent;
+  width: 35px;
+  height: 35px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  margin-top: -17px;
+}
+
+/*Intro-Home*/
+.intro {
+  @include common-font("VETCLight-Regular", 30px);
+
+  .intro-1 {
+    @include color-background($color-text, $bg-intro1);
+    padding: 20px 20px;
+  }
+
+  .intro-2 {
+    @include color-background($color-text, $bg-intro2) ;
+    padding: 20px 20px;
+  }
+
+  .intro-text {
+    color: $color-text;
+  }
+
+  .ilovevetc {
+    @include background(url("#{$images-icons}/common_fbslogan_bgr.jpg") no-repeat, cover);
+    width: 100%;
+    padding: 11px;
+
+    .ilove-text {
+      @include common-font("VETC-Bold", 35px);
+    }
+
+    .ilove-space {
+      font-size: 42px;
+      color: #01c46b;
+      padding: 0px 30px;
+    }
+
+    .ilove-slogan {
+      @include common-font("VETCLight-Regular", 21px);
+      color: $white
+    }
+  }
+}
+
+/*New*/
+.news-home {
+  .slider-banner {
+    .owl-nav button {
+      position: absolute;
+      @include width-height(20px, 20px);
+      text-indent: -99999999px;
+      margin-top: -40px !important;
+      background-repeat: no-repeat !important;
+
+    }
+
+    .owl-prev {
+      background: url(../images/icons/common_icon_prev_selected.png) !important;
+      background-size: cover !important;
+      @include bottom-right (10px, 30px);
+    }
+
+    .owl-next {
+      background: url(../images/icons/common_icon_next_selected.png) !important;
+      background-size: cover !important;
+      @include bottom-right (10px, 4px);
+
+    }
+  }
+
+  .widget-content {
+    .img {
+      width: 100%;
+    }
+
+    &.item-rd {
+      padding: 6px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .widget-text {
+      padding: 10px;
+    }
+  }
+
+  .host-news-img {
+    padding-right: 0;
+  }
+
+  .host-news-dots {
+    position: relative;
+    margin-top: 28px;
+    @include color-background($white, $bg-support);
+
+    .widget-btn {
+      background: $color-line;
+      position: absolute;
+      @include bottom-right(0, 0);
+      @include width-height(100%, 30px);
+    }
+
+    p {
+      padding: 10px;
+    }
+  }
+}
+
+.widget-title {
+  margin-bottom: -6px;
+
+  img {
+    margin-bottom: 6px;
+    width: 26px !important;
+    height: 27px !important;
+    display: inline-block !important;
+  }
+;
+
+  .left {
+    margin-right: -5px;
+  }
+
+  .right {
+    margin-left: -5px;
+  }
+
+  .widget-td {
+    @include color-background($white, $bd-text);
+    @include common-font("VETCLight-Regular", 18px);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding: 4px 10px;
+  }
+}
+
+/*Share*/
+.share-title {
+  background: url(../images/icons/common_separate_bgr_1.png) repeat-x;
+  text-align: center;
+  min-height: 10px;
+
+  span {
+    @include color-background($bd-text, $white);
+    font-size: 27px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    position: relative;
+    top: -7px;
+  }
+}
+
+.share-home {
+
+  .slide-share {
+    .mCSB_scrollTools {
+      opacity: 0.75 !important;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+
+    .mCSB_dragger_bar {
+      width: 14px !important;
+      background: $bg-support !important;
+    }
+
+    .mCSB_draggerRail {
+      width: 2px;
+      background: #32aa67 !important;
+      box-shadow: none !important;
+    }
+
+    background: $bg-share;
+    border-radius: 10px;
+
+    #content-1.content {
+      height: 300px;
+    }
+
+    .content {
+      float: left;
+      padding: 15px;
+      position: relative;
+      width: 740px;
+      max-width: 95%;
+    }
+
+    .callbacks, .callbacks + p, #examples, .content, .disable-destroy, .show-hide, .dialog, .all-themes-switch, .scrollTo {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+/*Support*/
+.support-home {
+  .contact-home {
+    @include color-background($white, $bg-support);
+
+    .top-form {
+      position: relative;
+
+      a {
+        position: absolute;
+        top: 6px;
+        right: 5px;
+      }
+
+      input {
+        @include width-height(240px, 42px);
+        @include border-radius(10px);
+      }
+    }
+
+    .media-sp {
+      img {
+        padding: 0 3px;
+      }
+    }
+
+    .app {
+      img {
+        @include width-height(117px, 40px);
+      }
+    }
+  }
+
+  .support {
+    .support-content {
+      .support-box {
+        border: 1px solid #dcddde;
+        border-radius: 0;
+        padding: 20px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/*Footer*/
+.partner {
+  background: #b9bbbd;
+  padding: 15px 0;
+
+  .partner-line {
+    background: $color-line;
+    height: 10px;
+    position: relative;
+    top: -20px;
+  }
+
+  .partner-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+}
+
+.footer {
+  @include color-background($white, $bg-support);
+  @include common-font("VETCLight-Regular", 13px);
+
+  a, .company-info p {
+    color: rgb(203, 234, 217);
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+}
+
+/*Model*/
+.modal-gray {
+  margin: 85px auto;
+
+  .modal-content {
+    position: relative;
+    background: #dfe0e1;
+    padding: 20px;
+    @include border-radius(0);
+    box-shadow: none;
+    border: 1px solid #f0f1f2;
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  .modal-header {
+    border: none;
+    display: block;
+  }
+
+  button.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include padding-magin(3px 7px, 0);
+    @include color-background($white, $bg-support);
+    opacity: 1;
+    text-shadow: none;
+    font-style: normal;
+  }
+
+  .description {
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    display: inline-block;
+  }
+
+  .modal-body {
+    padding: 0px 70px;
+
+    .row {
+      position: relative;
+    }
+
+    .form-control {
+      text-align: center;
+      border: 1px solid #b3b3b4;
+    }
+
+    .form-control {
+      @include common-font("VETCRegular-Regular", 13px);
+    }
+
+    .btn-success {
+      @include color-background($white, $bg-support);
+      border: none;
+    }
+
+    .btn-fixed {
+      padding: 6px 44px;
+    }
+  }
+}
+
+
+/*============================
+  Sub Page
+ ============================*/
+/*About*/
+.about-vetc {
+  .content-hdqt {
+    .box-hdqt {
+      position: relative;
+      @include background(url("../images/img/pro_about_man_bgr.jpg"), cover);
+      margin-bottom: 50px;
+      color: $white;
+      @include width-height(100%, 400px) ;
+
+      .title-hdqt {
+        padding-top: 25%;
+        padding-left: 5%;
+      }
+
+      img {
+        position: absolute;
+        bottom: 10px;
+        @include padding-magin(0 0 0 50%, 0 0 -10px 0);
+        z-index: 1;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/*San Pham*/
+
+.prev-header {
+  position: sticky;
+  top: -172px;
+  z-index: 100;
+  background: $white;
+  padding-bottom: 10px;
+
+  .container {
+    max-width: 1008px;
+  }
+
+  .sp-menu {
+    border: 1px solid #A4A6A9;
+    margin: 0 4px;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      @include color-background($bg-support, $white);
+      @include padding-magin(20px, 0px);
+      @include common-font("VETC-Bold", 14px);
+      font-weight: bold;
+      display: block;
+
+      &:hover {
+        @include color-background($white, $bg-support);
+      }
+    }
+  }
+}
+.sub-banner{
+  position: relative;
+
+.title-sub{
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  color:$white;
+  text-shadow: 2px 2px 4px #240b3a;
+}
+}
+.body-li-tk {
+  .object-img1 {
+    float: left;
+    width: 50%;
+
+    img {
+      text-align: right;
+    }
+  }
+
+  .object-text {
+    max-width: 30%;
+  }
+
+  .tk-number {
+    @include common-font("VETC-Bold", 6.5em);
+    font-weight: bold;
+  }
+
+  .money {
+    position: absolute;
+    animation-name: Mymoney;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .money1 {
+    animation-duration: 2s;
+  }
+
+  .money2 {
+    animation-duration: 3.5s;
+  }
+
+  @keyframes Mymoney {
+    from {
+      top: 80%;
+      right: 17%
+    }
+    to {
+      top: 150%;
+      right: 17%
+    }
+  }
+}
+
+.box-tollbooths {
+  overflow: hidden;
+  @include width-height(100%, 530px);
+  background: $bg-intro1;
+
+  .objetc-pro1 {
+    z-index: 10;
+  }
+
+  .object-pro {
+    position: absolute;
+
+
+  }
+
+  .oto1 {
+    animation-name: Protoll;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+  }
+
+  .oto2 {
+    animation-name: Protoll2;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .oto3 {
+    animation-name: Protoll3;
+    animation-duration: 7s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes Protoll {
+    from {
+      bottom: 0%;
+      left: 0%
+    }
+    to {
+      bottom: 100%;
+      left: 100%
+    }
+  }
+  @keyframes Protoll2 {
+    from {
+      bottom: -5%;
+      left: 20%
+    }
+    to {
+      bottom: 10%;
+      left: 38%
+    }
+  }
+  @keyframes Protoll3 {
+    from {
+      bottom: -30%;
+      left: 0%
+    }
+    to {
+      bottom: 3%;
+      left: 30%
+    }
+  }
+}
+.content-dgd{
+  .share-home{
+    border: 1px solid $bd-text;
+  }
+}
+/*Gallery*/
+.list-gallery {
+  .box-gallery {
+    @include color-background($white, $bg-support);
+    padding: 10px;
+    margin-bottom: 30px;
+
+    .content-gallery {
+      position: relative;
+
+      p {
+        padding: 10px 0;
+
+        a {
+          color: $white !important;
+        }
+      }
+
+      .img-responsive {
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      .btn-play {
+        position: absolute;
+        @include top-left(40%, 45%);
+      }
+    }
+  }
+}
+
+.lg-outer {
+  .lg-icon {
+    text-indent: -99999999px;
+    @include width-height(40px, 40px);
+  }
+
+  .lg-prev {
+    @include background(url("../images/icons/prev.jpg") no-repeat, contain);
+
+    &:hover {
+      @include background(url("../images/icons/prev-hover.jpg") no-repeat, contain);
+    }
+  }
+
+  .lg-next {
+    @include background(url("../images/icons/next-icon.jpg") no-repeat, contain);
+
+    &:hover {
+      @include background(url("../images/icons/next-icon-hover.jpg") no-repeat, contain);
+    }
+  }
+
+  .lg-thumb-outer {
+    .lg-toogle-thumb {
+      @include background(url("../images/icons/menu.png") no-repeat, contain);
+
+      &:hover {
+        @include background(url("../images/icons/menu-hover.png") no-repeat, contain);
+      }
+    }
+  }
+
+  .lg-close {
+    @include background(url("../images/icons/close.PNG") no-repeat, contain);
+
+    &:hover {
+      @include background(url("../images/icons/close-hover.png") no-repeat, contain);
+    }
+  }
+
+  .lg-fullscreen {
+    display: none;
+  }
+
+  .lg-download {
+    display: none;
+  }
+}
+
+.content-li {
+  border: 10px solid #1e9b61;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.content-dgd {
+  background: #f6f6f6;
+}
+
+/*News*/
+.first-new {
+  border-top: 2px solid $bd-text;
+}
+
+.sub-news {
+  .share-title {
+    min-height: 5px !important;
+  }
+
+  .box-news {
+    h5 {
+      @include common-font("VETC-Bold", 17px);
+    }
+
+    span {
+      @include common-font("VETCLight-Regular", 10px);
+      padding: 10px 0 !important;
+      display: block;
+    }
+  }
+
+  .pagination-custom .pagination {
+    li a {
+      border-radius: 0 !important;
+      margin: 0 2px !important;
+      border: 1px solid #cdcdcd;
+      color: #626263;
+      padding: 7px 12px;
+      font-size: 22px;
+
+
+      &:hover {
+        background: #ddd;
+      }
+    }
+
+    li.active a {
+      border: 1px solid $bg-support;
+      @include color-background($white, $bg-support);
+
+    }
+  }
+}
+
+/*============================
+    Mobile
+ ============================*/
+@media (max-width: 992px) {
+  .hidden-m {
+    display: none !important;
+  }
+  .header {
+    .container {
+      padding: 0;
+      .navbar {
+        padding: 0 !important;
+
+        .navbar-toggler {
+          color: $white;
+          font-size: 30px;
+          padding: 8px 8px;
+        }
+        .nav-link{
+          padding-left: 8px;
+        }
+      }
+    }
+
+    .navbar-brand {
+      left: 50%;
+      margin-left: -105px !important;
+    }
+
+    .navbar-toggle {
+      float: left;
+      display: block;
+
+      .icon-bar {
+        background: #fff;
+      }
+    }
+  ;
+  }
+  #skdslider {
+    .slide-desc {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-md {
+    display: none !important;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .host-news-dots {
+    height: 150px;
+    margin-top: 0 !important;
+  }
+  .intro {
+    .intro-content {
+      width: 100%;
+
+      .img-intro, .title {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .login-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-5-custom {
+    width: 20% !important;
+    flex: 0 0 20%;
+  }
+}

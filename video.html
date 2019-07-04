@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VETC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Include CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/lightgallery.css">
+    <link rel="stylesheet" href="assets/js/plugins/OwlCarousel2/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/OwlCarousel2/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/lightgallery.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--Header-->
+<div class="top-header hidden-m">
+    <div class="container">
+        <nav class="navbar-header text-right">
+            <div class="nav-link top-nav-active d-inline-block">
+                <ul class="nav navbar-nav nav-link-menu">
+                    <li class="menu-item"><a href="">Khách hàng</a></li>
+                    <li class="menu-item"><a href="">Đại lý</a></li>
+                    <li class="menu-item"><a href="">Nhà đầu tư BOT</a></li>
+                    <li class="menu-item"><a href="">Cơ quan quản lý nhà nước</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav nav-link-account">
+                    <li class="menu-item-account"><a href="#">Đăng nhập</a>/<a href="#" data-toggle="modal"
+                                                                               data-target="#register-model">Đăng ký</a>
+                        <img src="assets/images/icons/common_top_lock.png"></li>
+                </ul>
+            </div>
+            <form class="top-form d-inline-block" action="">
+                <input type="hidden" name="page" value="1">
+                <div class="input-group-sm">
+                    <input type="text" class="form-control" name="search" value="" placeholder="Tìm kiếm">
+                    <a href="#"><img src="assets/images/icons/common_top_search.png"></a>
+                </div>
+            </form>
+        </nav>
+    </div>
+</div>
+<div class="header sticky-nav">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm">
+            <button class="navbar-toggler hidden-lg-up collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+                ☰
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/icons/common_top_logo.png">
+            </a>
+
+            <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="ve-chung-toi.html" id="navbardrop" data-toggle="dropdown">
+                            VỀ CHÚNG TÔI
+                        </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="ve-chung-toi.html#p1">GIỚI THIỆU CHUNG</a>
+                            <a class="dropdown-item" href="ve-chung-toi.html#p2">TẦM NHÌN-SỨ MỆNH</a>
+                            <a class="dropdown-item" href="ve-chung-toi.html#p3">HỘI ĐỒNG QUẢN TRỊ</a>
+                            <a class="dropdown-item" href="ve-chung-toi.html#p4">THÀNH TỰU</a>
+                            <a class="dropdown-item" href="ve-chung-toi.html#p5">VETC THƯƠNG HIỆU</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="sanpham.html" id="navbardrop" data-toggle="dropdown">
+                            SẢN PHẨM</a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="sanpham.html#sp1">KHÁI QUÁT</a>
+                            <a class="dropdown-item" href="sanpham.html#sp2">LỢI ÍCH</a>
+                            <a class="dropdown-item" href="sanpham.html#sp3">CÔNG NGHỆ</a>
+                            <a class="dropdown-item" href="sanpham.html#sp4">CÁCH DÙNG</a>
+                            <a class="dropdown-item" href="sanpham.html#sp5">ĐIỂM DỊCH VỤ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            HƯỚNG DẪN </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="#">HƯỚNG DẪN CHO KHÁCH HÀNG CÁ NHÂN</a>
+                            <a class="dropdown-item" href="#">HƯỚNG DẪN CHO KHÁCH HÀNG DOANH NGHIỆP</a>
+                            <a class="dropdown-item" href="#">HỖ TRỢ DỊCH VỤ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ĐIỂM TIẾP NHẬN DỊCH VỤ</a>
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            TIN TỨC
+                        </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="tintuc.html">TIN XÃ HỘI</a>
+                            <a class="dropdown-item" href="tintuc.html">TIN DOANH NGHIỆP</a>
+                            <a class="dropdown-item" href="gallery.html">HÌNH ẢNH</a>
+                            <a class="dropdown-item" href="video.html">VIDEO</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            TUYỂN DỤNG
+                        </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="#">TẠI SAO CHỌN VETC</a>
+                            <a class="dropdown-item" href="#">CƠ HỘI NGHỀ NGHIỆP</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIÊN HỆ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--End Header-->
+
+<!--Sub Banner-->
+<div class="sub-banner mt-5">
+    <img class="img-fluid" src="assets/images/img/gallery-01.png">
+    <h3 class="title-sub text-uppercase text-right hidden-md wow fadeInDown" data-wow-duration="2s"><strong>Cập nhật tin tức mới nhất<br> về dịch vụ thu phí tự động đường bộ<br> tại Việt Nam</strong></h3>
+
+</div>
+<!--End Sub Banner-->
+
+<!--List Gallery-->
+<div class="list-gallery mt-5">
+    <div class="demo-gallery dark mrb35 container">
+        <ul id="video-player-param" class="list-unstyled row">
+            <li class="col-md-6 " data-src="https://youtu.be/yZVVlg2x1yA">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Thanh toán phí sử dụng đường bộ qua tài khoản giao thông</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a>
+                    </div>
+                </div>
+            </li>
+            <li class="col-md-6 " data-src="https://youtu.be/32Hpfg1kIMg">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Thêm 10 nghìn điểm hỗ trợ tài xế nạp tiền thu giá tự động</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a></div>
+                </div>
+            </li>
+            <li class="col-md-6" data-src="https://youtu.be/cDTfOIrM4HQ">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Giới thiệu dịch vụ thu phí tự động đường bộ VETC</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a></div>
+                </div>
+            </li>
+            <li class="col-md-6" data-src="https://youtu.be/PJTKhzMW59M">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Lợi ích của Dịch vụ thu phí tự động đường bộ</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a></div>
+                </div>
+            </li>
+            <li class="col-md-6" data-src="https://youtu.be/NzXtaAe-GhE">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Hướng dẫn đăng ký vé tháng quý trực tuyến</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a></div>
+                </div>
+            </li>
+            <li class="col-md-6" data-src="https://youtu.be/WPCJCscga2Y">
+                <div class="box-gallery">
+                    <div class="content-gallery"><a href="">
+                        <img class="img-responsive" src="assets/images/img/gl1.jpg">
+                        <p><a href="#">Hướng dẫn nạp tiền Online qua ngân hàng BIDV</a></p>
+                        <a href="#"><img class="btn-play" src="assets/images/icons/common_icon_play.png"></a>
+                    </a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--End List Gallery-->
+
+<!--Intro-->
+<div class="intro">
+    <div class="ilovevetc text-center">
+        <div class="container">
+            <div class="ilove-text d-lg-inline-block">
+                I
+                <span class="withLove">
+          <img src="assets/images/icons/common_fbslogan_icon_heart.png">
+      </span>
+                VETC
+            </div>
+            <span class="ilove-space hidden-m">|</span>
+            <span class="ilove-slogan">HÃY CÙNG CHÚNG TÔI
+                    SỐNG HIỆN ĐẠI, LÁI VĂN MINH
+            </span>
+            <img src="assets/images/icons/common_fbslogan_icon_fb.png">
+        </div>
+    </div>
+</div>
+<!--End Intro-->
+
+<!--Support-->
+<div class="support-home">
+    <div class="contact-home pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3">
+                    <p>ĐĂNG KÝ NHẬN THÔNG TIN TỪ VETC</p>
+                    <form class="top-form d-inline-block" action="">
+                        <input type="hidden" name="page" value="1">
+                        <div class="input-group-sm">
+                            <input type="text" class="form-control" name="input-signup" value=""
+                                   placeholder="Email của bạn">
+                            <a href="#"><img src="assets/images/icons/common_icon_play.png" width="30px" height="30px"></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 text-center mb-3 media-sp">
+                    <p>THEO DÕI CHÚNG TÔI</p>
+                    <img src="assets/images/icons/common_icon_social_fb.png">
+                    <img src="assets/images/icons/common_icon_social_googleplus.png">
+                    <img src="assets/images/icons/common_icon_social_linkedin.png">
+                    <img src="assets/images/icons/common_icon_social_youtube.png">
+                </div>
+                <div class="col-md-4 app text-center mb-3">
+                    <p>TẢI VÀ CÀI ĐẶT ỨNG DỤNG VETC</p>
+                    <img class="mr-3" src="assets/images/icons/common_icon_app_android.png">
+                    <img src="assets/images/icons/common_icon_app_ios.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="support mt-5">
+            <div class="share-title text-center">
+                <span class="color-text">CHIA SẺ VỀ VETC</span>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4 support-content wow fadeInLeft" data-wow-duration="2s">
+                    <div class="support-box">
+                        <p class="color-text">CÂU HỎI THƯỜNG GẶP</p>
+
+                        <img src="assets/images/icons/common_icon_footer_faq.png">
+                        <p>Câu hỏi thường gặp liên quan tới VETC</p>
+                    </div>
+                </div>
+                <div class="col-md-4 support-content wow fadeInLeft" data-wow-duration="2s">
+                    <div class="support-box">
+                        <p class="color-text">TỔNG ĐÀI CHĂM SÓC KHÁCH HÀNG</p>
+                        <img src="assets/images/icons/common_icon_footer_phone.png">
+                        <h4 class="color-purple font-weight-bold"> 1900 6010</h4>
+                        <p class="color-text">Hỗ trợ 24/7</p>
+                        <p class="color-text">Sẵn sàng hỗ trợ bạn vào mọi thòi điểm</p>
+                    </div>
+                </div>
+                <div class="col-md-4 support-content wow fadeInLeft" data-wow-duration="2s">
+                    <div class="support-box">
+                        <p class="color-text">HỖ TRỢ TRỰC TUYẾN</p>
+                        <img src="assets/images/icons/common_icon_footer_chat.png">
+                        <p>Mọi thắc mắc của bạn sẽ được nhân viên VETC tư vấn và hỗ trợ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Support-->
+
+<!--Footer-->
+<div class="partner mt-5">
+    <div class="container">
+        <div class="partner-line"></div>
+        <div class="row">
+            <div class="col-md-4 color-white">
+                <div class="partner-title">
+                    <p class="text-white">HỢP TÁC CÙNG PHÁT TRIỂN</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="owl-partner" class="owl-carousel owl-theme list-inline list-partner">
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_1.gif" alt=""/></a>
+                    </div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_2.gif" alt=""/></a>
+                    </div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_3.gif" alt=""/></a>
+                    </div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_4.gif" alt=""/></a>
+                    </div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_5.gif"
+                                                       alt=""/></a></div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_6.gif"
+                                                       alt=""/></a></div>
+                    <div class="item"><a href="#"><img src="assets/images/icons/pro_footer_partner_7.gif"
+                                                       alt=""/></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-10">
+                        <p class="text-uppercase"><strong>CTY TNHH THU PHÍ TỰ ĐỘNG VETC</strong></p>
+
+                        <div class="company-info">
+                            <p>ĐỊA CHỈ_ Tầng 1, tòa nhà VPI, 167 Trung Kính, Yên Hòa, Cầu Giấy, Hà Nội.</p>
+                            <p>ĐIỆN THOẠI_ (84 - 24) 3 747 6666</p>
+                            <p>FAX_ (84 - 24) 3 747 2222</p>
+                            <p>WEBSITE_ <a href="index.html" target="_blank">www.vetc.com.vn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 hidden-m">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="text-uppercase"><strong>VỀ CHÚNG TÔI</strong></p>
+                        <ul class="list-unstyled onepage">
+                            <li><a href="">Giới thiệu chung</a></li>
+                            <li><a href="">Tầm nhìn - sứ mệnh</a></li>
+                            <li><a href="">Hội đồng Quản trị</a></li>
+                            <li><a href="">Ban lãnh đạo</a></li>
+                            <li><a href="">Thành tựu</a></li>
+                            <li><a href="">VETC Thương hiệu</a></li>
+                            <li><a href="">VETC Văn hóa</a></li>
+                            <li><a href="">Thư viện</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="text-uppercase"><strong>Sản phẩm</strong></p>
+                        <ul class="list-unstyled onepage">
+                            <li><a href="">Khái quát</a></li>
+                            <li><a href="">Lợi ích</a></li>
+                            <li><a href="">Công nghệ</a></li>
+                            <li><a href="">Cách dùng</a></li>
+                            <li><a href="">Điểm dịch vụ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="text-uppercase"><strong>Tin tức</strong></p>
+                        <ul class="list-unstyled onepage">
+                            <li><a href="">Tin xã hội</a></li>
+                            <li><a href="">Tin doanh nghiệp</a></li>
+                            <li><a href="">Chính sách bảo mật thông
+                                tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="text-uppercase"><strong>Quản lý dịch vụ trực tuyến</strong></p>
+                        <ul class="list-unstyled">
+                            <li><a href="">Khách hàng</a></li>
+                            <li><a href="">Đại lý</a></li>
+                            <li><a href="">Nhà đầu tư BOT</a></li>
+                            <li><a href="">Cơ quan quản lý nhà nước</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Footer-->
+<!--Include Javascript-->
+
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/mScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/plugins/OwlCarousel2/owl.carousel.min.js"></script>
+<script src="assets/js/plugins/lightgallery/lightgallery.min.js"></script>
+<script src="assets/js/plugins/lightgallery/lg-thumbnail.min.js"></script>
+<script src="assets/js/plugins/lightgallery/lg-fullscreen.min.js"></script>
+<script src="assets/js/plugins/lightgallery/lg-video.js"></script>
+<script src="assets/js/plugins/lightgallery/lg-autoplay.js"></script>
+<script src="assets/js/plugins/wow/wow.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
+
