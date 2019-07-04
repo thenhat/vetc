@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="913222a4-58c6-4dd4-8873-6617a1e9a9ec" name="Default Changelist" comment="" />
+    <list default="true" id="913222a4-58c6-4dd4-8873-6617a1e9a9ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -35,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/video.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -70,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="120" lean-forward="true" selection-start-line="15" selection-end-line="120" />
+              <caret line="120" selection-start-line="15" selection-end-line="120" />
             </state>
           </provider>
         </entry>
@@ -120,6 +122,9 @@
       <find>.navbar-expand-sm .navbar-toggler</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -147,6 +152,7 @@
     <option name="width" value="1350" />
     <option name="height" value="690" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -176,11 +182,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)" />
       <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)\assets\js\plugins\jssor-slider" />
       <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)\assets\js\plugins\skdslider" />
       <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)\assets\js" />
       <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)\assets\js\plugins\wow" />
-      <recent name="C:\Users\DELL\Desktop\VETC(19-06-2019)\assets\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,12 +232,12 @@
       <workItem from="1562058124495" duration="7212000" />
       <workItem from="1562107561708" duration="6662000" />
       <workItem from="1562188256906" duration="11891000" />
-      <workItem from="1562200209751" duration="9607000" />
+      <workItem from="1562200209751" duration="10219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182696000" />
+    <option name="totallyTimeSpent" value="183308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -433,14 +439,14 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="120" lean-forward="true" selection-start-line="15" selection-end-line="120" />
+          <caret line="120" selection-start-line="15" selection-end-line="120" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/video.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
